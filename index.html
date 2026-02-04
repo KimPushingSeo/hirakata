@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hira and Kata - 학습 프로그램</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="help-container">
+            <button id="help-btn">?</button>
+            <div id="help-tooltip" class="help-content">
+                <h3>💡 학습 가이드</h3>
+
+                <section>
+                    <h4>1. 스마트 카드 학습</h4>
+                    <ul>
+                        <li>
+                            <b>🔊 클릭 발음:</b> 메인 카드를 클릭하면 원어민
+                            발음이 재생됩니다.
+                        </li>
+                        <li>
+                            <b>🔄 플립 기능:</b> 터치 시 카드가 뒤집히며 정답이
+                            공개됩니다. (광클 방지 적용)
+                        </li>
+                        <li>
+                            <b>🎮 2가지 모드:</b> 읽기(글자 보고 맞추기) /
+                            쓰기(발음 보고 쓰기)
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>2. 예시 단어 학습</h4>
+                    <ul>
+                        <li>
+                            <b>📚 실전 단어:</b> 글자가 포함된 순수
+                            일본어/외래어 예시를 제공합니다.
+                        </li>
+                        <li>
+                            <b>🎧 단어 듣기:</b> 리스트를 클릭해 단어 전체
+                            발음을 확인하세요.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>3. 자유로운 쓰기 & 관리</h4>
+                    <ul>
+                        <li>
+                            <b>🎨 자유 쓰기:</b> 화면 어디서나 마우스/손가락으로
+                            글자를 써보세요.
+                        </li>
+                        <li>
+                            <b>📈 진행도 관리:</b> 글자별 20회 마스터 시스템과
+                            진행 바를 제공합니다.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div id="bg-floating-zone"></div>
+        <canvas id="drawing-canvas"></canvas>
+
+        <header class="site-header">
+            <span class="title-hira">Hira</span>
+            <span class="title-and">and</span>
+            <span class="title-kata">Kata</span>
+        </header>
+
+        <div class="controls-wrapper">
+            <div class="controls">
+                <button id="hiragana-btn" class="toggle active">
+                    Hiragana
+                </button>
+                <div class="divider"></div>
+                <button id="katakana-btn" class="toggle">Katakana</button>
+            </div>
+
+            <div class="controls mode-group">
+                <button id="read-mode-btn" class="toggle mode-toggle active">
+                    읽기 연습
+                </button>
+                <div class="divider"></div>
+                <button id="write-mode-btn" class="toggle mode-toggle">
+                    쓰기 연습
+                </button>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div id="card" class="card">
+                <div class="face front">
+                    <div id="front" class="kana-large"></div>
+                    <div class="progress-inner">
+                        <div class="progress-bg">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <span class="pg-text">0 / 20</span>
+                    </div>
+                    <div class="tap-guide">Tap to Flip</div>
+                </div>
+                <div class="face back">
+                    <div class="answer-group"></div>
+                    <div class="progress-inner">
+                        <div class="progress-bg">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <span class="pg-text">0 / 20</span>
+                    </div>
+                    <div class="tap-guide">Next Card</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="word-list" class="word-list"></div>
+
+        <script src="data.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
