@@ -717,135 +717,321 @@ const defaultData = {
                 { t: 'しっぽ', e: 'shippo', k: '꼬리' },
             ],
         },
+        // 1. 청음 요음 (기본)
+        // --- 청음 요음 ---
         {
             kana: 'きゃ',
             eng: 'kya',
             kor: '캬',
-            words: [{ t: 'きゃく', e: 'kyaku', k: '손님' }],
+            words: [
+                { t: 'きゃく', e: 'kyaku', k: '손님' },
+                { t: 'きゃんぷ', e: 'kyanpu', k: '캠프' },
+            ],
         },
         {
             kana: 'きゅ',
             eng: 'kyu',
             kor: '큐',
-            words: [{ t: 'きゅうり', e: 'kyuuri', k: '오이' }],
+            words: [
+                { t: 'きゅうり', e: 'kyuuri', k: '오이' },
+                { t: 'きゅうどう', e: 'kyuudou', k: '궁도' },
+            ],
         },
         {
             kana: 'きょ',
             eng: 'kyo',
             kor: '켜',
-            words: [{ t: 'きょねん', e: 'kyonen', k: '작년' }],
+            words: [
+                { t: 'きょねん', e: 'kyonen', k: '작년' },
+                { t: 'きょり', e: 'kyori', k: '거리' },
+            ],
         },
+
         {
             kana: 'しゃ',
             eng: 'sha',
             kor: '샤',
-            words: [{ t: 'しゃしん', e: 'shashin', k: '사진' }],
+            words: [
+                { t: 'しゃしん', e: 'shashin', k: '사진' },
+                { t: 'しゃかい', e: 'shakai', k: '사회' },
+            ],
         },
         {
             kana: 'しゅ',
             eng: 'shu',
             kor: '슈',
-            words: [{ t: 'しゅくだい', e: 'shukudai', k: '숙제' }],
+            words: [
+                { t: 'しゅくだい', e: 'shukudai', k: '숙제' },
+                { t: 'しゅみ', e: 'shumi', k: '취미' },
+            ],
         },
         {
             kana: 'しょ',
             eng: 'sho',
             kor: '쇼',
-            words: [{ t: 'しょくどう', e: 'shokudou', k: '식당' }],
+            words: [
+                { t: 'しょくどう', e: 'shokudou', k: '식당' },
+                { t: 'しょうゆ', e: 'shouyu', k: '간장' },
+            ],
         },
+
         {
             kana: 'ちゃ',
             eng: 'cha',
             kor: '챠',
-            words: [{ t: 'ちゃいろ', e: 'chairo', k: '갈색' }],
+            words: [
+                { t: 'ちゃいろ', e: 'chairo', k: '갈색' },
+                { t: 'おちゃ', e: 'ocha', k: '차(음료)' },
+            ],
         },
         {
             kana: 'ちゅ',
             eng: 'chu',
             kor: '츄',
-            words: [{ t: 'ちゅうい', e: 'chuui', k: '주의' }],
+            words: [
+                { t: 'ちゅうい', e: 'chuui', k: '주의' },
+                { t: 'ちゅうしゃ', e: 'chuusha', k: '주차/주사' },
+            ],
         },
         {
             kana: 'ちょ',
             eng: 'cho',
             kor: '쵸',
-            words: [{ t: 'ちょっと', e: 'chotto', k: '잠깐' }],
+            words: [
+                { t: 'ちょっと', e: 'chotto', k: '잠깐' },
+                { t: 'ちょちょ', e: 'chocho', k: '나비' },
+            ],
         },
+
         {
             kana: 'にゃ',
             eng: 'nya',
             kor: '냐',
-            words: [{ t: 'こんにゃく', e: 'konnyaku', k: '곤약' }],
+            words: [
+                { t: 'こんにゃく', e: 'konnyaku', k: '곤약' },
+                { t: 'にゃんこ', e: 'nyanko', k: '야옹이' },
+            ],
         },
         {
-            kana: 'にゅ',
+            kana: '에',
             eng: 'nyu',
             kor: '뉴',
-            words: [{ t: 'にゅうがく', e: 'nyuugaku', k: '입학' }],
+            words: [
+                { t: 'にゅう가く', e: 'nyuugaku', k: '입학' },
+                { t: 'にゅうし', e: 'nyuushi', k: '입시' },
+            ],
         },
         {
             kana: 'にょ',
             eng: 'nyo',
             kor: '뇨',
-            words: [{ t: 'にょう', e: 'nyou', k: '소변' }],
+            words: [
+                { t: 'にょう', e: 'nyou', k: '소변' },
+                { t: 'にょろにょろ', e: 'nyoronyoro', k: '꿈틀꿈틀' },
+            ],
         },
+
         {
             kana: 'ひゃ',
             eng: 'hya',
             kor: '햐',
-            words: [{ t: 'ひゃく', e: 'hyaku', k: '100' }],
+            words: [
+                { t: 'ひゃく', e: 'hyaku', k: '100' },
+                { t: 'ひゃっかてん', e: 'hyakkaten', k: '백화점' },
+            ],
         },
         {
             kana: 'ひゅ',
             eng: 'hyu',
             kor: '휴',
-            words: [{ t: 'ひゅうが', e: 'hyuuga', k: '휴가(지명)' }],
+            words: [
+                { t: 'ひゅうが', e: 'hyuuga', k: '휴가(지명)' },
+                { t: 'ひゅうひゅう', e: 'hyuuhyuu', k: '쌩쌩(바람)' },
+            ],
         },
         {
             kana: 'ひょ',
             eng: 'hyo',
             kor: '효',
-            words: [{ t: 'ひょう', e: 'hyou', k: '표/표범' }],
+            words: [
+                { t: 'ひょう', e: 'hyou', k: '표범' },
+                { t: 'ひょうばん', e: 'hyouban', k: '평판' },
+            ],
         },
+
         {
             kana: 'みゃ',
             eng: 'mya',
             kor: '먀',
-            words: [{ t: 'みゃく', e: 'myaku', k: '맥박' }],
+            words: [
+                { t: 'みゃく', e: 'myaku', k: '맥박' },
+                { t: 'なみゃく', e: 'namyaku', k: '나맥' },
+            ],
         },
         {
             kana: 'みゅ',
             eng: 'myu',
             kor: '뮤',
-            words: [{ t: 'みゅうじ', e: 'myuuji', k: '묘지(고어 성씨)' }],
+            words: [
+                { t: 'みゅうじ', e: 'myuuji', k: '묘지' },
+                { t: 'みゅーじあむ', e: 'myuujiamu', k: '박물관' },
+            ],
         },
         {
             kana: 'みょ',
             eng: 'myo',
             kor: '묘',
-            words: [{ t: 'みょうじ', e: 'myouji', k: '성씨' }],
+            words: [
+                { t: 'みょうじ', e: 'myouji', k: '성씨' },
+                { t: 'みょうにち', e: 'myounichi', k: '내일' },
+            ],
         },
+
         {
             kana: 'りゃ',
             eng: 'rya',
             kor: '랴',
-            words: [{ t: 'りゃく', e: 'ryaku', k: '생략' }],
+            words: [
+                { t: 'りゃく', e: 'ryaku', k: '생략' },
+                { t: 'りゃくだつ', e: 'ryakudatsu', k: '약탈' },
+            ],
         },
         {
             kana: 'りゅ',
             eng: 'ryu',
             kor: '류',
-            words: [{ t: 'りゅう', e: 'ryuu', k: '용' }],
+            words: [
+                { t: 'りゅう', e: 'ryuu', k: '용' },
+                { t: 'りゅうがく', e: 'ryuugaku', k: '유학' },
+            ],
         },
         {
             kana: 'りょ',
             eng: 'ryo',
             kor: '료',
-            words: [{ t: 'りょこう', e: 'ryokou', k: '여행' }],
+            words: [
+                { t: 'りょこう', e: 'ryokou', k: '여행' },
+                { t: 'りょうり', e: 'ryouri', k: '요리' },
+            ],
+        },
+
+        // --- 탁음 요음 ---
+        {
+            kana: 'ぎゃ',
+            eng: 'gya',
+            kor: '갸',
+            words: [
+                { t: 'ぎゃく', e: 'gyaku', k: '반대' },
+                { t: 'ぎゃくてん', e: 'gyakuten', k: '역전' },
+            ],
+        },
+        {
+            kana: 'ぎゅ',
+            eng: 'gyu',
+            kor: '규',
+            words: [
+                { t: 'ぎゅうにゅう', e: 'gyuunyuu', k: '우유' },
+                { t: 'ぎゅうにく', e: 'gyuuniku', k: '소고기' },
+            ],
+        },
+        {
+            kana: 'ぎょ',
+            eng: 'gyo',
+            kor: '교',
+            words: [
+                { t: 'ぎょぎょう', e: 'gyogyou', k: '어업' },
+                { t: 'ぎょかい', e: 'gyokai', k: '어패류' },
+            ],
+        },
+
+        {
+            kana: 'じゃ',
+            eng: 'ja',
+            kor: '자',
+            words: [
+                { t: 'じゃがいも', e: 'jagaimo', k: '감자' },
+                { t: 'じゃま', e: 'jama', k: '방해' },
+            ],
+        },
+        {
+            kana: 'じゅ',
+            eng: 'ju',
+            kor: '주',
+            words: [
+                { t: 'じゅんび', e: 'junbi', k: '준비' },
+                { t: 'じゅぎょう', e: 'jugyou', k: '수업' },
+            ],
+        },
+        {
+            kana: 'じょ',
+            eng: 'jo',
+            kor: '조',
+            words: [
+                { t: 'じょせい', e: 'josei', k: '여성' },
+                { t: 'じょし', e: 'joshi', k: '여자/여학생' },
+            ],
+        },
+
+        {
+            kana: '비ゃ',
+            eng: 'bya',
+            kor: '뱌',
+            words: [
+                { t: 'さんびゃく', e: 'sanbyaku', k: '300' },
+                { t: 'はっぴゃく', e: 'happyaku', k: '800' },
+            ],
+        },
+        {
+            kana: 'びゅ',
+            eng: 'byu',
+            kor: '뷰',
+            words: [
+                { t: 'びゅうびゅう', e: 'byuubyuu', k: '쌩쌩' },
+                { t: 'びゅう', e: 'byuu', k: '뷰(관점)' },
+            ],
+        },
+        {
+            kana: 'びょ',
+            eng: 'byo',
+            kor: '뵤',
+            words: [
+                { t: 'びょうき', e: 'byouki', k: '병' },
+                { t: 'びょういん', e: 'byouin', k: '병원' },
+            ],
+        },
+
+        // --- 반탁음 요음 ---
+        {
+            kana: 'ぴゃ',
+            eng: 'pya',
+            kor: '퍄',
+            words: [
+                { t: 'ろっぴゃく', e: 'roppyaku', k: '600' },
+                { t: 'はっぴゃく', e: 'happyaku', k: '800' },
+            ],
+        },
+        {
+            kana: 'ぴゅ',
+            eng: 'pyu',
+            kor: '퓨',
+            words: [
+                { t: 'ぴゅあ', e: 'pyua', k: '순수함' },
+                { t: 'ぴゅんぴゅん', e: 'pyunpyun', k: '슉슉(바람)' },
+            ],
+        },
+        {
+            kana: 'ぴょ',
+            eng: 'pyo',
+            kor: '표',
+            words: [
+                { t: 'ぴょんぴょん', e: 'pyonpyon', k: '깡충깡충' },
+                { t: 'ろっぴょ', e: 'roppyo', k: '6표(투표)' },
+            ],
         },
     ],
 
     katakana: [
+        // --- 기본 가나 ---
         {
             kana: 'ア',
             eng: 'a',
@@ -1022,7 +1208,7 @@ const defaultData = {
             kor: '츠',
             words: [
                 { t: 'ツアー', e: 'tsua-', k: '투어' },
-                { t: 'ツナ', e: 'tsuna', k: '참치(캔)' },
+                { t: 'ツ나', e: 'tsuna', k: '참치(캔)' },
                 { t: 'ツリー', e: 'tsuri-', k: '트리' },
             ],
         },
@@ -1152,8 +1338,8 @@ const defaultData = {
             kor: '마',
             words: [
                 { t: 'マスク', e: 'masuku', k: '마스크' },
-                { t: 'マイク', e: 'maiku', k: '마이크' },
-                { t: 'マッチ', e: 'macchi', k: '성냥' },
+                { t: 'マーケット', e: 'ma-ketto', k: '시장' },
+                { t: 'マナー', e: 'mana-', k: '매너' },
             ],
         },
         {
@@ -1162,8 +1348,8 @@ const defaultData = {
             kor: '미',
             words: [
                 { t: 'ミルク', e: 'miruku', k: '우유' },
-                { t: 'ミス', e: 'misu', k: '실수' },
-                { t: 'ミント', e: 'minto', k: '민트' },
+                { t: 'ミシン', e: 'mishin', k: '재봉틀' },
+                { t: 'ミュージアム', e: 'myu-jiamu', k: '박물관' },
             ],
         },
         {
@@ -1171,9 +1357,9 @@ const defaultData = {
             eng: 'mu',
             kor: '무',
             words: [
-                { t: 'ムード', e: 'mu-do', k: '무드' },
+                { t: 'ムード', e: 'mu-do', k: '분위기/무드' },
+                { t: 'チーム', e: 'chi-mu', k: '팀' },
                 { t: 'ハム', e: 'hamu', k: '햄' },
-                { t: 'ガム', e: 'gamu', k: '껌' },
             ],
         },
         {
@@ -1182,8 +1368,8 @@ const defaultData = {
             kor: '메',
             words: [
                 { t: 'メニュー', e: 'menyu-', k: '메뉴' },
+                { t: 'メール', e: 'me-ru', k: '이메일' },
                 { t: 'メロン', e: 'meron', k: '멜론' },
-                { t: 'メモ', e: 'memo', k: '메모' },
             ],
         },
         {
@@ -1193,7 +1379,7 @@ const defaultData = {
             words: [
                 { t: 'モニター', e: 'monita-', k: '모니터' },
                 { t: 'モデル', e: 'moderu', k: '모델' },
-                { t: 'モノレール', e: 'monore-ru', k: '모노레일' },
+                { t: 'モダン', e: 'modan', k: '모던' },
             ],
         },
         {
@@ -1201,9 +1387,9 @@ const defaultData = {
             eng: 'ya',
             kor: '야',
             words: [
-                { t: 'ヤング', e: 'yangu', k: '젊은이' },
                 { t: 'タイヤ', e: 'taiya', k: '타이어' },
-                { t: 'イヤリング', e: 'iyaringu', k: '귀걸이' },
+                { t: 'ヤング', e: 'yangu', k: '젊음' },
+                { t: 'ダイヤ', e: 'daiya', k: '다이아몬드' },
             ],
         },
         {
@@ -1211,9 +1397,9 @@ const defaultData = {
             eng: 'yu',
             kor: '유',
             words: [
-                { t: 'ユーザー', e: 'yu-za-', k: '유저' },
                 { t: 'ユニフォーム', e: 'yunifo-mu', k: '유니폼' },
-                { t: 'ユーモア', e: 'yu-moa', k: '유머' },
+                { t: 'ユーザー', e: 'yu-za-', k: '유저' },
+                { t: 'ユニーク', e: 'yuni-ku', k: '유니크' },
             ],
         },
         {
@@ -1221,9 +1407,9 @@ const defaultData = {
             eng: 'yo',
             kor: '요',
             words: [
-                { t: 'ヨーグルト', e: 'yo-guruto', k: '요구르트' },
-                { t: 'ヨーロッパ', e: 'yo-roppa', k: '유럽' },
                 { t: 'ヨット', e: 'yotto', k: '요트' },
+                { t: 'ヨーグルト', e: 'yo-guruto', k: '요구르트' },
+                { t: 'ヨガ', e: 'yoga', k: '요가' },
             ],
         },
         {
@@ -1231,9 +1417,9 @@ const defaultData = {
             eng: 'ra',
             kor: '라',
             words: [
-                { t: 'ラーメン', e: 'ra-men', k: '라면' },
                 { t: 'ラジオ', e: 'rajio', k: '라디오' },
-                { t: 'ライオン', e: 'raion', k: '사자' },
+                { t: 'ライト', e: 'raito', k: '라이트' },
+                { t: 'ランチ', e: 'ranchi', k: '점심' },
             ],
         },
         {
@@ -1241,9 +1427,9 @@ const defaultData = {
             eng: 'ri',
             kor: '리',
             words: [
-                { t: 'リボン', e: 'ribon', k: '리본' },
+                { t: 'リンゴ', e: 'ringo', k: '사과' },
                 { t: 'リズム', e: 'rizumu', k: '리듬' },
-                { t: 'リスト', e: 'risuto', k: '리스트' },
+                { t: 'リボン', e: 'ribon', k: '리본' },
             ],
         },
         {
@@ -1253,7 +1439,7 @@ const defaultData = {
             words: [
                 { t: 'ルール', e: 'ru-ru', k: '규칙' },
                 { t: 'ルビー', e: 'rubi-', k: '루비' },
-                { t: 'プール', e: 'pu-ru', k: '수영장' },
+                { t: 'ホテル', e: 'hoteru', k: '호텔' },
             ],
         },
         {
@@ -1261,9 +1447,9 @@ const defaultData = {
             eng: 're',
             kor: '레',
             words: [
-                { t: 'レストラン', e: 'resutoran', k: '레스토랑' },
+                { t: 'レポート', e: 'repo-to', k: '보고서' },
                 { t: 'レモン', e: 'remon', k: '레몬' },
-                { t: 'レベル', e: 'reberu', k: '레벨' },
+                { t: 'レストラン', e: 'resutoran', k: '레스토랑' },
             ],
         },
         {
@@ -1273,7 +1459,7 @@ const defaultData = {
             words: [
                 { t: 'ロボット', e: 'robotto', k: '로봇' },
                 { t: 'ロケット', e: 'roketto', k: '로켓' },
-                { t: 'ロッカー', e: 'rokka-', k: '로커' },
+                { t: 'ロビー', e: 'robi-', k: '로비' },
             ],
         },
         {
@@ -1282,8 +1468,7 @@ const defaultData = {
             kor: '와',
             words: [
                 { t: 'ワイン', e: 'wain', k: '와인' },
-                { t: 'ワイド', e: 'waido', k: '와이드' },
-                { t: 'ワンピ―ス', e: 'wanpi-su', k: '원피스' },
+                { t: 'パワー', e: 'pawa-', k: '파워' },
             ],
         },
         {
@@ -1291,9 +1476,9 @@ const defaultData = {
             eng: 'wo',
             kor: '오',
             words: [
+                { t: 'ヲタ', e: 'wota', k: '오타쿠(줄임)' },
                 { t: 'ヲタク', e: 'wotaku', k: '오타쿠' },
-                { t: 'ヲ', e: 'wo', k: '조사' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'ヲ', e: 'wo', k: '오(조사로만 사용)' },
             ],
         },
         {
@@ -1301,19 +1486,21 @@ const defaultData = {
             eng: 'n',
             kor: '응',
             words: [
-                { t: 'パンツ', e: 'pantsu', k: '바지/팬티' },
-                { t: 'ペン', e: 'pen', k: '펜' },
-                { t: 'レモン', e: 'remon', k: '레몬' },
+                { t: 'パン', e: 'pan', k: '빵' },
+                { t: 'コイン', e: 'koin', k: '동전' },
+                { t: 'デザイン', e: 'dezain', k: '디자인' },
             ],
         },
+
+        // --- 탁음 ---
         {
             kana: 'ガ',
             eng: 'ga',
             kor: '가',
             words: [
                 { t: 'ガス', e: 'gasu', k: '가스' },
-                { t: 'ガム', e: 'gamu', k: '껌' },
                 { t: 'ガラス', e: 'garasu', k: '유리' },
+                { t: 'ガイド', e: 'gaido', k: '가이드' },
             ],
         },
         {
@@ -1323,7 +1510,7 @@ const defaultData = {
             words: [
                 { t: 'ギター', e: 'gita-', k: '기타' },
                 { t: 'ギフト', e: 'gifuto', k: '선물' },
-                { t: 'ギャグ', e: 'gyagu', k: '개그' },
+                { t: 'ギャラリー', e: 'gyarari-', k: '갤러리' },
             ],
         },
         {
@@ -1331,7 +1518,7 @@ const defaultData = {
             eng: 'gu',
             kor: '구',
             words: [
-                { t: 'グッズ', e: 'gutsu', k: '굿즈' },
+                { t: 'グラス', e: 'gurasu', k: '유리잔' },
                 { t: 'グループ', e: 'guru-pu', k: '그룹' },
                 { t: 'グラム', e: 'guramu', k: '그램' },
             ],
@@ -1352,19 +1539,18 @@ const defaultData = {
             kor: '고',
             words: [
                 { t: 'ゴルフ', e: 'gorufu', k: '골프' },
-                { t: 'ゴールド', e: 'go-rudo', k: '골드' },
-                { t: 'ゴール', e: 'go-ru', k: '골' },
+                { t: 'ゴール', e: 'go-ru', k: '목표/골' },
+                { t: 'ゴム', e: 'gomu', k: '고무' },
             ],
         },
-
         {
             kana: 'ザ',
             eng: 'za',
             kor: '자',
             words: [
-                { t: 'サイズ', e: 'saizu', k: '사이즈' },
-                { t: 'デザイン', e: 'dezain', k: '디자인' },
+                { t: 'デザート', e: 'deza-to', k: '디저트' },
                 { t: 'ピザ', e: 'piza', k: '피자' },
+                { t: 'デザイン', e: 'dezain', k: '디자인' },
             ],
         },
         {
@@ -1372,9 +1558,9 @@ const defaultData = {
             eng: 'ji',
             kor: '지',
             words: [
-                { t: 'ジム', e: 'jimu', k: '체육관(Gym)' },
                 { t: 'ジュース', e: 'ju-su', k: '주스' },
-                { t: 'ジャケット', e: 'jaketto', k: '재킷' },
+                { t: 'ラジオ', e: 'rajio', k: '라디오' },
+                { t: 'ページ', e: 'pe-ji', k: '페이지' },
             ],
         },
         {
@@ -1382,7 +1568,7 @@ const defaultData = {
             eng: 'zu',
             kor: '즈',
             words: [
-                { t: 'ズボン', e: 'zubon', k: '바지' },
+                { t: 'チーズ', e: 'chi-zu', k: '치즈' },
                 { t: 'サイズ', e: 'saizu', k: '사이즈' },
                 { t: 'ジャズ', e: 'jazu', k: '재즈' },
             ],
@@ -1392,9 +1578,9 @@ const defaultData = {
             eng: 'ze',
             kor: '제',
             words: [
-                { t: 'ゼロ', e: 'zero', k: '제로' },
                 { t: 'ゼリー', e: 'zeri-', k: '젤리' },
-                { t: 'プレゼン', e: 'purezen', k: '프레젠테이션' },
+                { t: 'ゼロ', e: 'zero', k: '제로' },
+                { t: 'プレゼン', e: 'purezen', k: '발표' },
             ],
         },
         {
@@ -1403,19 +1589,18 @@ const defaultData = {
             kor: '조',
             words: [
                 { t: 'ゾーン', e: 'zo-n', k: '존(구역)' },
-                { t: 'ゾンビ', e: 'zonbi', k: '좀비' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'アマゾン', e: 'amazon', k: '아마존' },
+                { t: 'リ조트', e: 'rizo-to', k: '리조트' },
             ],
         },
-
         {
             kana: 'ダ',
             eng: 'da',
             kor: '다',
             words: [
                 { t: 'ダンス', e: 'dansu', k: '댄스' },
-                { t: 'ダイヤ', e: 'daiya', k: '다이아' },
-                { t: 'ダム', e: 'damu', k: '댐' },
+                { t: 'ダイレクト', e: 'dairekuto', k: '다이렉트' },
+                { t: 'サラダ', e: 'sarada', k: '샐러드' },
             ],
         },
         {
@@ -1423,29 +1608,24 @@ const defaultData = {
             eng: 'ji',
             kor: '지',
             words: [
-                { t: '-', e: '-', k: '(거의 안씀)' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'ヂャーナル', e: 'jya-naru', k: '저널(학술지)' },
+                { t: 'ヂスコ', e: 'jisuko', k: '디스코' },
             ],
         },
         {
             kana: 'ヅ',
             eng: 'zu',
             kor: '즈',
-            words: [
-                { t: '-', e: '-', k: '(거의 안씀)' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [{ t: 'カヅラ', e: 'kazura', k: '가발' }],
         },
         {
             kana: 'デ',
             eng: 'de',
             kor: '데',
             words: [
-                { t: 'データ', e: 'de-ta', k: '데이터' },
                 { t: 'デザイン', e: 'dezain', k: '디자인' },
-                { t: 'デパート', e: 'depa-to', k: '백화점' },
+                { t: 'データ', e: 'de-ta', k: '데이터' },
+                { t: 'ビデオ', e: 'bideo', k: '비디오' },
             ],
         },
         {
@@ -1453,20 +1633,19 @@ const defaultData = {
             eng: 'do',
             kor: '도',
             words: [
-                { t: 'ドア', e: 'doa', k: '문(Door)' },
+                { t: 'ドア', e: 'doa', k: '문(도어)' },
                 { t: 'ドラマ', e: 'dorama', k: '드라마' },
-                { t: 'ドライブ', e: 'doraibu', k: '드라이브' },
+                { t: 'カード', e: 'ka-do', k: '카드' },
             ],
         },
-
         {
             kana: 'バ',
             eng: 'ba',
             kor: '바',
             words: [
                 { t: 'バス', e: 'basu', k: '버스' },
-                { t: 'バイク', e: 'baiku', k: '오토바이' },
-                { t: 'バター', e: 'bata-', k: '버터' },
+                { t: 'バナナ', e: 'banana', k: '바나나' },
+                { t: 'バッグ', e: 'baggu', k: '가방' },
             ],
         },
         {
@@ -1475,8 +1654,8 @@ const defaultData = {
             kor: '비',
             words: [
                 { t: 'ビール', e: 'bi-ru', k: '맥주' },
-                { t: 'ビル', e: 'biru', k: '빌딩' },
-                { t: 'ビデオ', e: 'bideo', k: '비디오' },
+                { t: 'ピアノ', e: 'piano', k: '피아노' },
+                { t: 'テレビ', e: 'terebi', k: 'TV' },
             ],
         },
         {
@@ -1484,9 +1663,9 @@ const defaultData = {
             eng: 'bu',
             kor: '부',
             words: [
+                { t: 'ブラシ', e: 'burashi', k: '브러시' },
                 { t: 'ブログ', e: 'burogu', k: '블로그' },
-                { t: 'ブランド', e: 'burando', k: '브랜드' },
-                { t: 'ブルー', e: 'buru-', k: '블루' },
+                { t: 'テーブル', e: 'te-buru', k: '테이블' },
             ],
         },
         {
@@ -1496,7 +1675,7 @@ const defaultData = {
             words: [
                 { t: 'ベッド', e: 'beddo', k: '침대' },
                 { t: 'ベルト', e: 'beruto', k: '벨트' },
-                { t: 'ベンチ', e: 'benchi', k: '벤치' },
+                { t: 'ベース', e: 'be-su', k: '베이스' },
             ],
         },
         {
@@ -1504,19 +1683,21 @@ const defaultData = {
             eng: 'bo',
             kor: '보',
             words: [
+                { t: 'ボタン', e: 'botan', k: '버튼' },
+                { t: 'ボックス', e: 'bokkusu', k: '상자' },
                 { t: 'ボール', e: 'bo-ru', k: '공' },
-                { t: 'ボタン', e: 'botan', k: '단추' },
-                { t: 'ロボット', e: 'robotto', k: '로봇' },
             ],
         },
+
+        // --- 반탁음 ---
         {
             kana: 'パ',
             eng: 'pa',
             kor: '파',
             words: [
                 { t: 'パン', e: 'pan', k: '빵' },
-                { t: 'パスタ', e: 'pasuta', k: '파스타' },
-                { t: 'パーティー', e: 'pa-ti-', k: '파티' },
+                { t: 'ピアノ', e: 'piano', k: '피아노(피)' },
+                { t: 'パソコン', e: 'pasokon', k: 'PC' },
             ],
         },
         {
@@ -1525,8 +1706,8 @@ const defaultData = {
             kor: '피',
             words: [
                 { t: 'ピアノ', e: 'piano', k: '피아노' },
-                { t: 'ピンク', e: 'pinku', k: '분홍' },
-                { t: 'ピザ', e: 'piza', k: '피자' },
+                { t: 'ピンク', e: 'pinku', k: '분홍색' },
+                { t: 'コピー', e: 'kopi-', k: '복사' },
             ],
         },
         {
@@ -1534,9 +1715,9 @@ const defaultData = {
             eng: 'pu',
             kor: '푸',
             words: [
+                { t: 'プレゼント', e: 'purezento', k: '선물' },
                 { t: 'プール', e: 'pu-ru', k: '수영장' },
-                { t: 'プロ', e: 'puro', k: '프로' },
-                { t: 'プリン', e: 'purin', k: '푸딩' },
+                { t: 'カップ', e: 'kappu', k: '컵' },
             ],
         },
         {
@@ -1556,18 +1737,18 @@ const defaultData = {
             words: [
                 { t: 'ポスト', e: 'posuto', k: '우체통' },
                 { t: 'ポケット', e: 'poketto', k: '주머니' },
-                { t: 'ポスター', e: 'posuta-', k: '포스터' },
+                { t: 'レポート', e: 'repo-to', k: '보고서' },
             ],
         },
 
-        // --- [요음 - Kya, Sha, Cha...] ---
+        // --- 요음 ---
         {
             kana: 'キャ',
             eng: 'kya',
             kor: '캬',
             words: [
-                { t: 'キャンディ', e: 'kyandi', k: '사탕' },
-                { t: 'キャンプ', e: 'kyanpu', k: '캠프' },
+                { t: 'キャンプ', e: 'kyanpu', k: '캠핑' },
+                { t: 'キャベツ', e: 'kyabetsu', k: '양배추' },
                 { t: 'キャラクター', e: 'kyarakuta-', k: '캐릭터' },
             ],
         },
@@ -1576,30 +1757,23 @@ const defaultData = {
             eng: 'kyu',
             kor: '큐',
             words: [
-                { t: 'キュート', e: 'kyu-to', k: '큐트(귀엽다)' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'キューブ', e: 'kyu-bu', k: '큐브' },
+                { t: 'バーベキュー', e: 'ba-bekyu-', k: '바비큐' },
             ],
         },
         {
             kana: 'キョ',
             eng: 'kyo',
-            kor: '쿄',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            kor: '켜',
+            words: [],
         },
-
         {
             kana: 'シャ',
             eng: 'sha',
             kor: '샤',
             words: [
-                { t: 'シャワー', e: 'shawa-', k: '샤워' },
                 { t: 'シャツ', e: 'shatsu', k: '셔츠' },
-                { t: 'シャンプー', e: 'shanpu-', k: '샴푸' },
+                { t: 'シャワー', e: 'shawa-', k: '샤워' },
             ],
         },
         {
@@ -1607,9 +1781,9 @@ const defaultData = {
             eng: 'shu',
             kor: '슈',
             words: [
-                { t: 'シューズ', e: 'shu-zu', k: '슈즈(신발)' },
-                { t: 'シュガー', e: 'shuga-', k: '설탕' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'シューズ', e: 'shu-zu', k: '신발' },
+                { t: 'シュート', e: 'shu-to', k: '슛' },
+                { t: 'キャッシュ', e: 'kyasshu', k: '캐시' },
             ],
         },
         {
@@ -1617,20 +1791,19 @@ const defaultData = {
             eng: 'sho',
             kor: '쇼',
             words: [
-                { t: 'ショップ', e: 'shoppu', k: '상점(Shop)' },
-                { t: 'ショー', e: 'sho-', k: '쇼(Show)' },
-                { t: 'ショック', e: 'shokku', k: '쇼크' },
+                { t: 'ショップ', e: 'shoppu', k: '상점' },
+                { t: 'ショック', e: 'shokku', k: '충격' },
+                { t: 'マンション', e: 'manshon', k: '맨션' },
             ],
         },
-
         {
             kana: 'チャ',
             eng: 'cha',
             kor: '챠',
             words: [
-                { t: 'チャンス', e: 'chansu', k: '기회(Chance)' },
-                { t: 'チャンネル', e: 'channeru', k: '채널' },
-                { t: 'チャレンジ', e: 'charenji', k: '도전' },
+                { t: 'チャット', e: 'chatto', k: '채팅' },
+                { t: 'チャンス', e: 'chansu', k: '기회' },
+                { t: 'おもちゃ', e: 'omocha', k: '장난감' },
             ],
         },
         {
@@ -1638,9 +1811,9 @@ const defaultData = {
             eng: 'chu',
             kor: '츄',
             words: [
+                { t: 'チューブ', e: 'chu-bu', k: '튜브' },
                 { t: 'チューリップ', e: 'chu-rippu', k: '튤립' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'シチュー', e: 'shichu-', k: '스튜' },
             ],
         },
         {
@@ -1648,21 +1821,15 @@ const defaultData = {
             eng: 'cho',
             kor: '쵸',
             words: [
-                { t: 'チョコレート', e: 'chokore-to', k: '초콜릿' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'チョコ', e: 'choko', k: '초코' },
+                { t: 'マッチョ', e: 'maccho', k: '근육질' },
             ],
         },
-
         {
             kana: 'ニャ',
             eng: 'nya',
             kor: '냐',
-            words: [
-                { t: 'ニャー', e: 'nya-', k: '야옹' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [],
         },
         {
             kana: 'ニュ',
@@ -1670,8 +1837,8 @@ const defaultData = {
             kor: '뉴',
             words: [
                 { t: 'ニュース', e: 'nyu-su', k: '뉴스' },
-                { t: 'ニュー', e: 'nyu-', k: '새로운(New)' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'ニュアンス', e: 'nyuansu', k: '뉘앙스' },
+                { t: 'メニュー', e: 'menyu-', k: '메뉴' },
             ],
         },
         {
@@ -1679,226 +1846,69 @@ const defaultData = {
             eng: 'nyo',
             kor: '뇨',
             words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'ニョッキ', e: 'nyokki', k: '뇨끼' },
+                { t: 'ケニョ', e: 'kenyo', k: '케냐' },
             ],
         },
-
         {
             kana: 'ヒャ',
             eng: 'hya',
             kor: '햐',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [],
         },
         {
             kana: 'ヒュ',
             eng: 'hyu',
             kor: '휴',
             words: [
-                { t: 'ヒューマン', e: 'hyu-man', k: '휴먼(인간)' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'ヒュ즈', e: 'hyu-zu', k: '퓨즈' },
+                { t: 'ヒューマン', e: 'hyu-man', k: '인간' },
+                { t: 'ヒュッテ', e: 'hyutte', k: '산장' },
             ],
         },
         {
             kana: 'ヒョ',
             eng: 'hyo',
             kor: '효',
-            words: [
-                { t: 'ヒョウ', e: 'hyou', k: '표범' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [],
         },
-
         {
             kana: 'ミャ',
             eng: 'mya',
             kor: '먀',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [{ t: 'ミャンマー', e: 'myanma-', k: '미얀마' }],
         },
         {
             kana: 'ミュ',
             eng: 'myu',
             kor: '뮤',
-            words: [
-                { t: 'ミュージック', e: 'myu-jikku', k: '음악(Music)' },
-                { t: 'ミュージカル', e: 'myu-jikaru', k: '뮤지컬' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [{ t: 'ミュージカル', e: 'myu-jikaru', k: '뮤지컬' }],
         },
         {
             kana: 'ミョ',
             eng: 'myo',
             kor: '묘',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [],
         },
-
         {
             kana: 'リャ',
             eng: 'rya',
             kor: '랴',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [{ t: 'リャマ', e: 'ryama', k: '라마' }],
         },
         {
             kana: 'リュ',
             eng: 'ryu',
             kor: '류',
-            words: [
-                { t: 'リュック', e: 'ryukku', k: '배낭' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
+            words: [{ t: 'ボリューム', e: 'boryu-mu', k: '볼륨' }],
         },
         {
             kana: 'リョ',
             eng: 'ryo',
             kor: '료',
             words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-
-        {
-            kana: 'ギャ',
-            eng: 'gya',
-            kor: '갸',
-            words: [
-                { t: 'ギャグ', e: 'gyagu', k: '개그' },
-                { t: 'ギャング', e: 'gyangu', k: '갱(Gang)' },
-                { t: 'ギャンブル', e: 'gyanburu', k: '도박' },
-            ],
-        },
-        {
-            kana: 'ギュ',
-            eng: 'gyu',
-            kor: '규',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-        {
-            kana: 'ギョ',
-            eng: 'gyo',
-            kor: '교',
-            words: [
-                { t: 'ギョーザ', e: 'gyo-za', k: '만두' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-
-        {
-            kana: 'ジャ',
-            eng: 'ja',
-            kor: '쟈',
-            words: [
-                { t: 'ジャム', e: 'jamu', k: '잼' },
-                { t: 'ジャズ', e: 'jazu', k: '재즈' },
-                { t: 'ジャケット', e: 'jaketto', k: '재킷' },
-            ],
-        },
-        {
-            kana: 'ジュ',
-            eng: 'ju',
-            kor: '쥬',
-            words: [
-                { t: 'ジュース', e: 'ju-su', k: '주스' },
-                { t: 'ジュニア', e: 'junia', k: '주니어' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-        {
-            kana: 'ジョ',
-            eng: 'jo',
-            kor: '죠',
-            words: [
-                { t: 'ジョギング', e: 'jogingu', k: '조깅' },
-                { t: 'ジョーク', e: 'jo-ku', k: '농담' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-
-        {
-            kana: 'ビャ',
-            eng: 'bya',
-            kor: '뱌',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-        {
-            kana: 'ビュ',
-            eng: 'byu',
-            kor: '뷰',
-            words: [
-                { t: 'ビューティー', e: 'byu-ti-', k: '뷰티' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-        {
-            kana: 'ビョ',
-            eng: 'byo',
-            kor: '뵤',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-
-        {
-            kana: 'ピャ',
-            eng: 'pya',
-            kor: '퍄',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-        {
-            kana: 'ピュ',
-            eng: 'pyu',
-            kor: '퓨',
-            words: [
-                { t: 'ピュア', e: 'pyua', k: '퓨어(순수)' },
-                { t: 'ピューマ', e: 'pyu-ma', k: '퓨마' },
-                { t: '-', e: '-', k: '-' },
-            ],
-        },
-        {
-            kana: 'ピョ',
-            eng: 'pyo',
-            kor: '표',
-            words: [
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
-                { t: '-', e: '-', k: '-' },
+                { t: 'リョカン', e: 'ryokan', k: '여관' },
+                { t: 'リョコウ', e: 'ryokou', k: '여행' },
             ],
         },
     ],

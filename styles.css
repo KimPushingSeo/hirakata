@@ -28,12 +28,16 @@ body {
     padding: 20px;
     overflow: hidden;
 }
+
+/* --- 상단 헤더 --- */
 .site-header {
     font-size: 5.5rem;
     font-weight: 800;
     margin-bottom: 20px;
     line-height: 1.1;
     user-select: none;
+    position: relative;
+    z-index: 10; /* 브러시(-1)보다 위 */
 }
 .title-hira {
     color: #8e44ad;
@@ -48,13 +52,15 @@ body {
     color: #e17055;
     text-shadow: 0 4px 15px rgba(225, 112, 85, 0.3);
 }
+
+/* --- 컨트롤 및 모드 전환 --- */
 .controls-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
     margin-bottom: 25px;
-    z-index: 110;
+    z-index: 10; /* 브러시(-1)보다 위 */
     position: relative;
 }
 
@@ -97,12 +103,15 @@ body {
         0 4px 12px rgba(46, 204, 113, 0.3),
         0 0 10px var(--green) !important;
 }
+
+/* --- 메인 학습 카드 --- */
 .card-container {
     perspective: 1000px;
     width: 320px;
     height: 400px;
     margin: 0 auto 20px auto;
-    z-index: 5;
+    z-index: 5; /* 브러시(-1)보다 위 */
+    position: relative;
 }
 
 .card {
@@ -159,6 +168,7 @@ body {
     font-weight: 600;
     color: #999;
 }
+
 .answer-group {
     width: 100%;
     display: flex;
@@ -167,6 +177,7 @@ body {
     justify-content: center;
     gap: 10px;
 }
+
 .progress-inner {
     position: absolute;
     bottom: 50px;
@@ -202,13 +213,15 @@ body {
     color: #ccc;
     animation: bounce 1.5s infinite;
 }
+
+/* --- 단어 리스트 --- */
 .word-list {
     width: 320px;
     min-height: 240px;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
-    z-index: 110;
+    z-index: 10; /* 브러시(-1)보다 위 */
     position: relative;
 }
 .word-list.show {
@@ -255,32 +268,40 @@ body.katakana-mode .word-text {
     font-weight: 700;
     color: #333;
 }
+
+/* --- 배경 및 캔버스 (중요!) --- */
 #bg-floating-zone {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -2;
+    z-index: -2; /* 최하단 배경 글자 */
     background-color: #f8f9fa;
 }
+
 #drawing-canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
-    pointer-events: none;
     width: 100vw;
     height: 100vh;
+    z-index: -1; /* 배경(-2) 보단 앞, UI(5~10) 보단 뒤 */
+    pointer-events: none;
 }
+
 #drawing-canvas.active {
-    pointer-events: auto;
+    pointer-events: auto; /* 쓰기 모드에서만 클릭 허용 */
 }
+
 .floating-char {
     position: absolute;
     font-weight: bold;
+    z-index: -2; /* 배경 글자 우선순위 고정 */
     animation: float-up linear infinite;
 }
+
+/* --- 헬프 버튼 --- */
 .help-container {
     position: fixed;
     top: 20px;
@@ -352,13 +373,11 @@ body.katakana-mode #help-btn {
     margin-bottom: 4px;
     list-style-type: '• ';
 }
-body.katakana-mode #help-btn {
-    background: #e17055;
-}
 body.katakana-mode .help-content h4 {
     color: #e17055;
 }
 
+/* --- 애니메이션 --- */
 @keyframes float-up {
     0% {
         transform: translateY(110vh) rotate(0deg);
@@ -382,5 +401,60 @@ body.katakana-mode .help-content h4 {
     }
     50% {
         transform: translateY(-5px);
+    }
+}
+
+/* --- 모바일 대응 미디어 쿼리 --- */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        justify-content: flex-start; /* 모바일은 위에서부터 정렬하는 게 편함 */
+        padding-top: 40px;
+        overflow-y: auto; /* 리스트가 길어질 수 있으므로 세로 스크롤 허용 */
+    }
+
+    /* 캔버스 기능 제거 */
+    #drawing-canvas {
+        display: none !important;
+    }
+
+    /* 제목 크기 대폭 축소 */
+    .site-header {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    /* 카드 컨테이너: 고정 px 대신 % 사용 */
+    .card-container {
+        width: 100%; /* 부모 너비에 맞춤 */
+        max-width: 300px; /* 너무 커지지 않게 제한 */
+        height: 380px; /* 높이도 살짝 조정 */
+        margin-bottom: 30px;
+    }
+
+    /* 카드 내부 폰트 크기 조정 */
+    .kana-large {
+        font-size: 5.5rem;
+    }
+    .back-kana {
+        font-size: 4rem;
+    }
+    .eng {
+        font-size: 2.2rem;
+    }
+    .kor {
+        font-size: 1.4rem;
+    }
+
+    /* 단어 리스트 너비 맞춤 */
+    .word-list {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* 헬프 툴팁이 화면 밖으로 나가지 않게 */
+    .help-content {
+        width: 260px;
+        right: -10px;
     }
 }
