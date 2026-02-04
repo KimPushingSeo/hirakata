@@ -1937,44 +1937,106 @@ const writeModeBtn = document.getElementById('write-mode-btn');
 const canvas = document.getElementById('drawing-canvas');
 const ctx = canvas.getContext('2d');
 
+// 모바일 체크 함수
+const isMobile = () => window.innerWidth <= 480;
+
 function setExerciseMode(isWrite) {
+    // 모바일에서는 쓰기 모드(캔버스)를 강제로 비활성화하거나 읽기 모드로 고정
+    if (isMobile() && isWrite) {
+        alert('모바일에서는 읽기 모드만 지원합니다.');
+        isWrite = false;
+    }
+
     isReverseMode = isWrite;
 
     if (isReverseMode) {
         writeModeBtn.classList.add('active');
         readModeBtn.classList.remove('active');
+        canvas.classList.add('active');
     } else {
         readModeBtn.classList.add('active');
         writeModeBtn.classList.remove('active');
+        canvas.classList.remove('active');
     }
 
     fadeOutCanvas();
     nextCard();
 }
 
-canvas.addEventListener('mousedown', (e) => {
-    isDrawing = true;
-    startX = e.clientX;
-    startY = e.clientY;
-    updateCanvasStyle();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX, e.clientY);
-});
+// --- 이벤트 리스너 통합 (마우스 & 터치) ---
 
-canvas.addEventListener('mousemove', (e) => {
-    if (!isDrawing) return;
-    ctx.lineTo(e.clientX, e.clientY);
-    ctx.stroke();
-});
-
-canvas.addEventListener('mouseup', (e) => {
-    isDrawing = false;
-    const diffX = Math.abs(e.clientX - startX);
-    const diffY = Math.abs(e.clientY - startY);
-    if (diffX < 5 && diffY < 5) {
+// 카드 직접 클릭 (캔버스 뒤에 있을 때를 대비)
+card.addEventListener('click', () => {
+    if (!canvas.classList.contains('active')) {
         handleCardFlip();
     }
 });
+
+// 캔버스 드로잉 및 클릭 판정
+const startAction = (e) => {
+    if (isMobile()) return; // 모바일은 캔버스 동작 무시
+    isDrawing = true;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    startX = clientX;
+    startY = clientY;
+    updateCanvasStyle();
+    ctx.beginPath();
+    ctx.moveTo(clientX, clientY);
+};
+
+const moveAction = (e) => {
+    if (!isDrawing || isMobile()) return;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    ctx.lineTo(clientX, clientY);
+    ctx.stroke();
+};
+
+const endAction = (e) => {
+    if (!isDrawing) return;
+    isDrawing = false;
+
+    // 클릭(터치)인지 드로잉인지 판정
+    const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+    const endY = e.changedTouches ? e.changedTouches[0].clientY : e.clientY;
+    const diffX = Math.abs(endX - startX);
+    const diffY = Math.abs(endY - startY);
+
+    if (diffX < 5 && diffY < 5) {
+        handleCardFlip();
+    }
+};
+
+canvas.addEventListener('mousedown', startAction);
+canvas.addEventListener('mousemove', moveAction);
+window.addEventListener('mouseup', endAction);
+
+// 모바일 전용: 카드를 터치하면 바로 뒤집히도록
+card.addEventListener(
+    'touchstart',
+    (e) => {
+        if (isMobile()) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        }
+    },
+    { passive: true },
+);
+
+card.addEventListener(
+    'touchend',
+    (e) => {
+        if (isMobile()) {
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            if (Math.abs(endX - startX) < 10 && Math.abs(endY - startY) < 10) {
+                handleCardFlip();
+            }
+        }
+    },
+    { passive: true },
+);
 
 function handleCardFlip() {
     if (isFlipping) return;
@@ -2011,7 +2073,13 @@ function pickRandomCard() {
 
     currentItem = available[Math.floor(Math.random() * available.length)];
 
-    canvas.classList.add('active');
+    // 모바일이 아닐 때만 캔버스 활성화 체크
+    if (!isMobile() && isReverseMode) {
+        canvas.classList.add('active');
+    } else {
+        canvas.classList.remove('active');
+    }
+
     if (
         canvas.width !== window.innerWidth ||
         canvas.height !== window.innerHeight
@@ -2021,10 +2089,10 @@ function pickRandomCard() {
 
     if (!isReverseMode) {
         frontText.textContent = currentItem.kana;
-        frontText.style.fontSize = '7rem';
+        frontText.style.fontSize = isMobile() ? '5rem' : '7rem';
     } else {
         frontText.textContent = currentItem.eng;
-        frontText.style.fontSize = currentItem.eng.length > 3 ? '4rem' : '5rem';
+        frontText.style.fontSize = currentItem.eng.length > 3 ? '3rem' : '4rem';
     }
 
     const backFace = document.querySelector('.face.back');
@@ -2048,12 +2116,12 @@ function pickRandomCard() {
             const div = document.createElement('div');
             div.className = 'word-item';
             div.innerHTML = `
-            <div class="word-text-group">
-                <span class="word-text">${word.t}</span>
-                <span class="word-eng">${word.e.toLowerCase()}</span> 
-            </div>
-            <span class="word-kor">${word.k}</span>
-        `;
+                <div class="word-text-group">
+                    <span class="word-text">${word.t}</span>
+                    <span class="word-eng">${word.e.toLowerCase()}</span> 
+                </div>
+                <span class="word-kor">${word.k}</span>
+            `;
             div.addEventListener('click', (e) => {
                 e.stopPropagation();
                 speak(word.t);
@@ -2063,6 +2131,8 @@ function pickRandomCard() {
     }
     updateProgress(currentItem.kana);
 }
+
+// ... 나머지 함수들 (updateProgress, nextCard, fadeOutCanvas, updateCanvasStyle, resizeCanvas, createFloatingChars, speak 동일) ...
 
 function updateProgress(charKey) {
     let count = studyCounts[charKey] || 0;
@@ -2076,7 +2146,7 @@ function updateProgress(charKey) {
 }
 
 function nextCard() {
-    if (currentItem) {
+    if (currentItem && card.classList.contains('flipped')) {
         studyCounts[currentItem.kana] = Math.min(
             (studyCounts[currentItem.kana] || 0) + 1,
             20,
@@ -2120,13 +2190,14 @@ function createFloatingChars() {
     if (!zone) return;
     zone.innerHTML = '';
     const hiraChars =
-        'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん';
+        'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむ메もやゆよらりるれろわをん';
     const kataChars =
-        'アイウエオカキクケコサシスセソタチツテトナ니ヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモ야ユヨラリルレロワヲン';
     const hiraColor = '142, 68, 173';
     const kataColor = '225, 112, 85';
 
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 40; i++) {
+        // 모바일 성능을 위해 개수 조절
         setTimeout(() => {
             const isHira = i % 2 === 0;
             const charSpan = document.createElement('span');
@@ -2138,15 +2209,10 @@ function createFloatingChars() {
             charSpan.style.left = `${Math.random() * 100}%`;
             charSpan.style.animationDuration = `${12 + Math.random() * 25}s`;
             charSpan.style.animationDelay = `${Math.random() * -30}s`;
-            charSpan.style.fontSize = `${1 + Math.random() * 3}rem`;
-            charSpan.style.color = `rgba(${targetColor}, ${0.06 + Math.random() * 0.12})`;
+            charSpan.style.fontSize = `${1 + Math.random() * 2}rem`;
+            charSpan.style.color = `rgba(${targetColor}, ${0.06 + Math.random() * 0.1})`;
             zone.appendChild(charSpan);
-            charSpan.addEventListener('animationiteration', () => {
-                charSpan.innerText =
-                    targetChars[Math.floor(Math.random() * targetChars.length)];
-                charSpan.style.left = `${Math.random() * 100}%`;
-            });
-        }, i * 50);
+        }, i * 100);
     }
 }
 
@@ -2161,10 +2227,6 @@ function init() {
     resizeCanvas();
     pickRandomCard();
     createFloatingChars();
-    const helpBtn = document.getElementById('help-btn');
-    helpBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
 
     hiraBtn.addEventListener('click', () => {
         document.body.classList.remove('katakana-mode');
@@ -2181,6 +2243,7 @@ function init() {
         hiraBtn.classList.remove('active');
         setExerciseMode(false);
     });
+
     readModeBtn.addEventListener('click', () => setExerciseMode(false));
     writeModeBtn.addEventListener('click', () => setExerciseMode(true));
 }
